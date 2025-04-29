@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+/* 
+# Colors
+
+### Primary
+
+- Pink: hsl(322, 100%, 66%)
+
+### Neutral
+
+- Very Pale Cyan: hsl(193, 100%, 96%)
+- Very Dark Cyan: hsl(192, 100%, 9%)
+- Grayish Blue: hsl(208, 11%, 55%)
+ */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+  background-image: url("./images/bg-hero-desktop.svg");
+  background-size: contain;
+  background-color: hsl(193, 100%, 96%);
+  z-index: 1;
+  padding: 0.8rem;
+}
+.heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+
+  img {
+    height: 30px;
+  }
+
+  button {
+    width: 150px;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0.3rem;
+    color: hsl(192, 100%, 9%);
+    font-weight: 500;
+    box-shadow: 6px 3px 20px hsl(192, 100%, 9%, 0.2);
+  }
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  padding: 4rem 4rem;
+
+  img {
+    width: 50%;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1rem;
+    gap: 1rem;
+  }
+  .description h1 {
+    font-size: 2.5rem;
+    color: hsl(192, 100%, 9%);
+  }
+
+  .description p {
+    font-size: 0.9rem;
+    color: hsl(192, 100%, 9%, 0.74);
+    font-weight: 500;
+  }
+  .description button {
+    width: 300px;
+    border-radius: 30px;
+    border-style: none;
+    padding: 0.8rem;
+    color: hsla(0, 0%, 100%, 0.74);
+    font-weight: 500;
+    box-shadow: 6px 3px 20px hsl(192, 100%, 9%, 0.2);
+    background-color: hsl(322, 100%, 66%);
+    margin-top: 1rem;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.details {
+  grid-area: details;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10rem;
+
+    div {
+      width: 50%;
+
+      margin: 1rem 2rem;
+      justify-self: flex-start;
+
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+        color: hsl(192, 100%, 9%, 0.74);
+        font-weight: 500;
+      }
+    }
+
+    img {
+      width: 500px;
+      height: auto;
+
+      margin: 1rem 3rem;
+    }
+  }
+}
+
+.cta {
+  grid-area: cta;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  grid-area: footer;
+}
